@@ -1,5 +1,5 @@
 import * as assert from "assert";
-import shallowEquals from "../src/shallow-equals-object";
+import { shallowEquals } from "../src/shallow-equals-object";
 
 describe("shallowEquals", () => {
     it("Test shallow comparision", () => {

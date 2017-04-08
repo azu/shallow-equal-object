@@ -1,7 +1,7 @@
 // MIT © 2017 azu
 const hasOwn = Object.prototype.hasOwnProperty;
 // Object.is ponyfill
-const is = (x: any, y: any): boolean => {
+export const is = (x: any, y: any): boolean => {
     if (x === y) {
         return x !== 0 || y !== 0 || 1 / x === 1 / y
     } else {
@@ -9,7 +9,7 @@ const is = (x: any, y: any): boolean => {
     }
 };
 
-const shallowEqual = (objA: any, objB: any): boolean => {
+export const shallowEquals = (objA: any, objB: any): boolean => {
     if (objA === objB) {
         return true;
     }
@@ -34,4 +34,3 @@ const shallowEqual = (objA: any, objB: any): boolean => {
 
     return true;
 };
-export default shallowEqual;
