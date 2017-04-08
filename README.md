@@ -1,4 +1,4 @@
-# shallow-equals-object
+# shallow-equals-object [![Build Status](https://travis-ci.org/azu/shallow-equals-object.svg?branch=master)](https://travis-ci.org/azu/shallow-equals-object)
 
 Shallow equal check object.
 
