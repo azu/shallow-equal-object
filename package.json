@@ -1,0 +1,48 @@
+{
+  "directories": {
+    "test": "test"
+  },
+  "author": "azu",
+  "license": "MIT",
+  "files": [
+    "bin/",
+    "lib/",
+    "src/"
+  ],
+  "name": "shallow-equals-object",
+  "version": "1.0.0",
+  "description": "Shallow equal check object.",
+  "main": "./lib/src/shallow-equals-object.js",
+  "types": "./lib/src/shallow-equals-object.d.ts",
+  "scripts": {
+    "test": "mocha test/",
+    "build": "cross-env NODE_ENV=production tsc -p .",
+    "watch": "tsc -p . --watch",
+    "prepublish": "npm run --if-present build"
+  },
+  "keywords": [
+    "object",
+    "check",
+    "equal",
+    "shallow-equal",
+    "equal",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/azu/shallow-equals-object.git"
+  },
+  "bugs": {
+    "url": "https://github.com/azu/shallow-equals-object/issues"
+  },
+  "homepage": "https://github.com/azu/shallow-equals-object",
+  "devDependencies": {
+    "@types/mocha": "^2.2.40",
+    "@types/node": "^7.0.12",
+    "cross-env": "^4.0.0",
+    "espower-typescript": "^8.0.0",
+    "mocha": "^3.2.0",
+    "power-assert": "^1.4.2",
+    "typescript": "^2.2.2"
+  }
+}
