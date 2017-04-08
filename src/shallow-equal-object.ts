@@ -9,7 +9,7 @@ export const is = (x: any, y: any): boolean => {
     }
 };
 
-export const shallowEquals = (objA: any, objB: any): boolean => {
+export const shallowEqual = (objA: any, objB: any): boolean => {
     if (objA === objB) {
         return true;
     }

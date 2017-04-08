@@ -9,11 +9,11 @@
     "lib/",
     "src/"
   ],
-  "name": "shallow-equals-object",
+  "name": "shallow-equal-object",
   "version": "1.0.0",
   "description": "Shallow equal check object.",
-  "main": "./lib/src/shallow-equals-object.js",
-  "types": "./lib/src/shallow-equals-object.d.ts",
+  "main": "./lib/src/shallow-equal-object.js",
+  "types": "./lib/src/shallow-equal-object.d.ts",
   "scripts": {
     "test": "mocha test/",
     "build": "cross-env NODE_ENV=production tsc -p .",
@@ -30,12 +30,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/azu/shallow-equals-object.git"
+    "url": "https://github.com/azu/shallow-equal-object.git"
   },
   "bugs": {
-    "url": "https://github.com/azu/shallow-equals-object/issues"
+    "url": "https://github.com/azu/shallow-equal-object/issues"
   },
-  "homepage": "https://github.com/azu/shallow-equals-object",
+  "homepage": "https://github.com/azu/shallow-equal-object",
   "devDependencies": {
     "@types/mocha": "^2.2.40",
     "@types/node": "^7.0.12",

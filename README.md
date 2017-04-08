@@ -1,4 +1,4 @@
-# shallow-equals-object [![Build Status](https://travis-ci.org/azu/shallow-equals-object.svg?branch=master)](https://travis-ci.org/azu/shallow-equals-object)
+# shallow-equal-object [![Build Status](https://travis-ci.org/azu/shallow-equal-object.svg?branch=master)](https://travis-ci.org/azu/shallow-equal-object)
 
 Shallow equal check object.
 
@@ -6,19 +6,19 @@ Shallow equal check object.
 
 Install with [npm](https://www.npmjs.com/):
 
-    npm install shallow-equals-object
+    npm install shallow-equal-object
 
 ## Usage
 
 ```js
-const { shallowEquals } = require(" shallow-equals-object");
+const { shallowEquals } = require(" shallow-equal-object");
 const base = { a: 1, b: 2 };
 shallowEquals(base, { a: 1, b: 2 }); // => true
 ```
 
 ## Changelog
 
-See [Releases page](https://github.com/azu/shallow-equals-object/releases).
+See [Releases page](https://github.com/azu/shallow-equal-object/releases).
 
 ## Running tests
 
@@ -30,7 +30,7 @@ Install devDependencies and Run `npm test`:
 
 Pull requests and stars are always welcome.
 
-For bugs and feature requests, [please create an issue](https://github.com/azu/shallow-equals-object/issues).
+For bugs and feature requests, [please create an issue](https://github.com/azu/shallow-equal-object/issues).
 
 1. Fork it!
 2. Create your feature branch: `git checkout -b my-new-feature`
