@@ -11,7 +11,7 @@ Install with [npm](https://www.npmjs.com/):
 ## Usage
 
 ```js
-const { shallowEqual } = require(" shallow-equal-object");
+const { shallowEqual } = require("shallow-equal-object");
 const base = { a: 1, b: 2 };
 shallowEqual(base, { a: 1, b: 2 }); // => true
 ```
