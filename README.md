@@ -35,6 +35,45 @@ assert.equal(shallowEqual({ a: "string" }, { a: "string" }, {
 }), false);
 ```
 
+#### `debug: boolean`
+
+Enable debug mode if `{ debug: true }`
+
+Debug mode show helpful log that why that result is `false`.
+
+```ts
+it("objectA is not object", () => {
+    shallowEqual(null, {}, {
+        debug: true,
+        console: consoleMock
+    });
+    assert.strictEqual(logCalls[0], "objectA is not object.");
+});
+it("objectB is not object", () => {
+    shallowEqual({}, null, {
+        debug: true,
+        console: consoleMock
+    });
+    assert.strictEqual(logCalls[0], "objectB is not object.");
+});
+it("object key length is not same", () => {
+    shallowEqual({}, { a: 1 }, {
+        debug: true,
+        console: consoleMock
+    });
+    assert.strictEqual(logCalls[0], "object key length is not same");
+});
+it("object value is not equal", () => {
+    shallowEqual({ a: 1 }, { a: 2 }, {
+        debug: true,
+        console: consoleMock
+    });
+    assert.strictEqual(logCalls[0], "key:a is not equals between A and B.");
+});
+```
+
+You can pass `console` object to `{ debug: true, console: ConsoleAPI }`
+
 ## Changelog
 
 See [Releases page](https://github.com/azu/shallow-equal-object/releases).
