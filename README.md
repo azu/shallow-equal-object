@@ -16,6 +16,25 @@ const base = { a: 1, b: 2 };
 shallowEqual(base, { a: 1, b: 2 }); // => true
 ```
 
+### Options
+
+You can pass option object as 3rd arguments. 
+
+#### `customEqual: (a:any, b:any) => boolean`
+
+```ts
+assert.ok(shallowEqual(base, { a: 1, b: 2 }, {
+    customEqual: (a, b) => {
+        return typeof a === "number" && typeof b === "number";
+    }
+}));
+assert.equal(shallowEqual({ a: "string" }, { a: "string" }, {
+    customEqual: (a, b) => {
+        return typeof a === "number" && typeof b === "number";
+    }
+}), false);
+```
+
 ## Changelog
 
 See [Releases page](https://github.com/azu/shallow-equal-object/releases).

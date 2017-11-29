@@ -20,4 +20,17 @@ describe("shallowEqual", () => {
         assert.equal(shallowEqual(null, {}), false);
         assert.equal(shallowEqual({}, null), false);
     });
+    it("can customize 3rd argument", () => {
+        const base = { a: 1, b: 2 };
+        assert.ok(shallowEqual(base, { a: 1, b: 2 }, {
+            customEqual: (a, b) => {
+                return typeof a === "number" && typeof b === "number";
+            }
+        }));
+        assert.equal(shallowEqual({ a: "string" }, { a: "string" }, {
+            customEqual: (a, b) => {
+                return typeof a === "number" && typeof b === "number";
+            }
+        }), false);
+    });
 });

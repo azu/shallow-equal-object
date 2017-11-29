@@ -8,12 +8,19 @@ export const is = (x: any, y: any): boolean => {
         return x !== x && y !== y
     }
 };
-
-export const shallowEqual = (objA: any, objB: any): boolean => {
+/**
+ * Return true, if `objA` is shallow equal to `objB`.
+ * Pass Custom equality function to `customEqual`.
+ * Default equality is `Object.is`
+ *
+ * `customEqual` function should return true if the `a` value is equal to `b` value.
+ */
+export const shallowEqual = (objA: any, objB: any, options?: {
+    customEqual?: <T>(a: T, b: T) => boolean
+}): boolean => {
     if (objA === objB) {
         return true;
     }
-
     if (typeof objA !== "object" || objA === null ||
         typeof objB !== "object" || objB === null) {
         return false;
@@ -26,8 +33,10 @@ export const shallowEqual = (objA: any, objB: any): boolean => {
         return false;
     }
 
+    const isEqual = options && typeof options.customEqual === "function" ? options.customEqual : is;
+
     for (let i = 0; i < keysA.length; i++) {
-        if (!hasOwn.call(objB, keysA[i]) || !is(objA[keysA[i]], objB[keysA[i]])) {
+        if (!hasOwn.call(objB, keysA[i]) || !isEqual(objA[keysA[i]], objB[keysA[i]])) {
             return false
         }
     }
