@@ -1,6 +1,12 @@
 # shallow-equal-object [![Build Status](https://travis-ci.org/azu/shallow-equal-object.svg?branch=master)](https://travis-ci.org/azu/shallow-equal-object)
 
-Shallow equal check object.
+Shallow equality check for objects.
+
+## Feature
+
+- Custom equal function
+- Debug mode
+    - Why it is not equal?
 
 ## Install
 
