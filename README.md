@@ -81,6 +81,10 @@ it("object value is not equal", () => {
 
 You can pass `console` object to `{ debug: true, console: ConsoleAPI }`
 
+## Related
+
+- [shallow-equal-props](https://github.com/azu/shallow-equal-props "azu/shallow-equal-props"): shallow equals for React's props
+
 ## Changelog
 
 See [Releases page](https://github.com/azu/shallow-equal-object/releases).
