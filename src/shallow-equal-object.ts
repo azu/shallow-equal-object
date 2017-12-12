@@ -78,8 +78,8 @@ export const shallowEqual = (
                 const out = options.console || console;
                 out.group(`shallow-equal-object`);
                 out.log(`key:${key} is not equals between A and B.`);
-                out.log(`objectA[${key}:`, objectA[key]);
-                out.log(`objectB[${key}:`, objectB[key]);
+                out.log(`objectA[${key}]:`, objectA[key]);
+                out.log(`objectB[${key}]:`, objectB[key]);
                 out.log("objectA", objectA);
                 out.log("objectB", objectB);
                 out.groupEnd();
