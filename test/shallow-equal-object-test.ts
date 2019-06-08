@@ -5,20 +5,20 @@ describe("shallowEqual", () => {
     it("Test shallow comparision", () => {
         const base = { a: 1, b: 2 };
         assert.ok(shallowEqual(base, { a: 1, b: 2 }));
-        assert.equal(shallowEqual(base, { a: 1, b: 3 }), false);
-        assert.equal(shallowEqual(base, { a: 1, b: 2, c: 3 }), false);
-        assert.equal(shallowEqual(base, { a: 1 }), false);
+        assert.strictEqual(shallowEqual(base, { a: 1, b: 3 }), false);
+        assert.strictEqual(shallowEqual(base, { a: 1, b: 2, c: 3 }), false);
+        assert.strictEqual(shallowEqual(base, { a: 1 }), false);
     });
     it("not support deep comparision", () => {
         const base = { a: { b: 2 } };
-        assert.equal(shallowEqual(base, { a: { b: 2 } }), false);
+        assert.strictEqual(shallowEqual(base, { a: { b: 2 } }), false);
     });
     it("null === null", () => {
         assert.ok(shallowEqual(null, null));
     });
     it("null !== {}", () => {
-        assert.equal(shallowEqual(null, {}), false);
-        assert.equal(shallowEqual({}, null), false);
+        assert.strictEqual(shallowEqual(null, {}), false);
+        assert.strictEqual(shallowEqual({}, null), false);
     });
     it("can customize 3rd argument", () => {
         const base = { a: 1, b: 2 };
@@ -33,7 +33,7 @@ describe("shallowEqual", () => {
                 }
             )
         );
-        assert.equal(
+        assert.strictEqual(
             shallowEqual(
                 { a: "string" },
                 { a: "string" },
@@ -47,12 +47,12 @@ describe("shallowEqual", () => {
         );
     });
     describe("debug", () => {
-        let logCalls = [];
+        let logCalls: string[] = [];
         const consoleMock = {
             group() {},
             groupEnd() {},
-            log(...message) {
-                logCalls.push(...message);
+            log(...messages: string[]) {
+                logCalls.push(...messages);
             }
         };
         beforeEach(() => {

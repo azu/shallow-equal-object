@@ -1,1 +1,1 @@
---compilers ts:espower-typescript/guess
+--require ts-node/register
